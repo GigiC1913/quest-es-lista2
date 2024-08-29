@@ -1,0 +1,385 @@
+Questão 1
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {	
+	float num;
+	
+	printf("Digite um numero: ");
+	scanf("%f", &num);
+	if (num > 10) {
+		printf("E MAIOR QUE 10!");
+	} else { 
+		printf(" NAO E MAIOR QUE 10!");
+	}
+	
+	return 0;
+}
+
+
+
+
+
+Questão 2
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+	
+	float num;
+	
+	printf("Digite um numero: ");
+	scanf("%f", &num);
+	 
+	if (num < 0) {
+		printf("Este numero e negativo.");
+	} else { 
+		printf("Este numero e positivo.");
+	}
+	
+	return 0;
+}
+
+
+
+
+
+
+
+
+Questão 3
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+	
+	float num, preco;
+	
+	printf("Digite a quantidade de macas que deseja comprar: ");
+	scanf("%f", &num);
+	
+	preco = num * 1.30;
+	
+	if (num < 12 ) {
+		printf("O preco sera R$%f", preco);
+	} else {
+		printf("O preco sera R$%f", num);
+	}
+	
+	return 0;
+}
+
+
+
+
+
+
+Questão 4
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+	
+	float nota1, nota2, media;
+	
+	printf("Digite a primeira nota (0 a 10): ");
+	scanf("%f", &nota1);
+	printf("Digite a segunda nota (0 a 10): ");
+	scanf("%f", &nota2);
+	media = (nota1 + nota2)/2;
+	
+	if (media >= 7) {
+		printf("Sua nota e %f\n APROVADO", media);
+	} else {
+		printf("Sua nota e %f\n REPROVADO", media);
+	}
+	
+	return 0;
+}
+
+
+
+
+
+
+Questão 5
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+	
+	int ano_atual, ano_nascimento, idade;
+	
+	printf("A idade minima para votar e 16 anos.\n Digite seu ano de nascimento: ");
+	scanf("%d", &ano_nascimento);
+	printf("Digite o ano atual: ");
+	scanf("%d", &ano_atual);
+	idade = ano_atual - ano_nascimento;
+	
+	if (idade >= 16) {
+		printf("Sua idade e %d, voce pode votar esse ano!", idade);
+	} else {
+		printf("Sua idade e %d, voce nao pode votar esse ano!", idade);
+	}
+	
+	
+	return 0;
+}
+
+
+
+
+
+
+Questão 6
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+	
+	int num1, num2;
+	
+	printf("Digite o primeiro valor: ");
+	scanf("%d", &num1);
+	printf("Digite o segundo valor: ");
+	scanf("%d", &num2);
+	
+	if (num1 > num2) {
+		printf("O maior valor e %d", num1);
+	} else if (num2 > num1) {
+		printf("O maior valor e %d", num2);
+	} else if (num1 = num2) {
+		printf("Os valores nao podem ser iguais.");
+	}
+	
+	return 0;
+}
+
+
+
+
+
+Questão 7
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+	
+	int num1, num2;
+	
+	printf("Digite o primeiro valor: ");
+	scanf("%d", &num1);
+	printf("Digite o segundo valor: ");
+	scanf("%d", &num2);
+	
+	if (num1 > num2) {
+		printf("Os valores em ordem crescente sao %d, %d", num2, num1);
+	} else if (num2 > num1) {
+		printf("Os valores em ordem crescente sao %d, %d", num1, num2);
+	} else if (num1 = num2) {
+		printf("Os valores nao podem ser iguais.");
+	}
+	return 0;
+}
+
+
+
+
+
+
+Questão 8
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+	
+	int inicio, fim, total;
+	
+	printf("Digite a hora de inicio do jogo de xadrez (0 a 23): ");
+	scanf("%d", &inicio);
+	printf("Digite a hora do fim do jogo de xadrez (0 a 23): ");
+	scanf("%d", &fim); 
+	
+	total = (24 - inicio) + fim;
+	
+	if (inicio < fim) {
+		printf("O jogo durou %d horas.", fim - inicio);
+	} else if (inicio > fim) {
+		printf("O jogo durou %d horas.", total);
+	} else if (inicio = fim) {
+		printf("O jogo durou 0 horas.");
+	}
+	return 0;
+}
+
+
+
+
+
+
+Questão 9
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+	
+	float horas_mes, sal_hora, h_extra, sal_extra, h_mais;
+	
+	printf("Digite as horas trabalhadas no mes: ");
+	scanf("%f", &horas_mes); 
+	printf("Digite o salario por hora: ");
+	scanf("%f", &sal_hora);
+	
+	h_mais = horas_mes - 160;
+	h_extra = (sal_hora * 0.5 * h_mais) + sal_hora;
+	sal_extra = h_extra + (sal_hora * horas_mes);
+	
+	if (horas_mes <= 160) {
+		printf("O salario total e: %f", sal_hora * horas_mes);
+	} else {
+		printf("O salario total e: %f", sal_extra);
+	}
+	return 0;
+}
+
+
+
+
+
+
+Questão 10
+
+#include <stdio.h>
+
+int main() {
+    char nome[50], sexo;
+    float altura, pesoIdeal;
+
+    printf("Digite o nome da pessoa:\n");
+    scanf("%s", nome);
+
+    printf("Digite a altura (em metros):\n");
+    scanf("%f", &altura);
+
+    printf("Digite o sexo M para masculino, F para feminino:\n");
+    scanf("%s", &sexo);
+
+    if (sexo == 'M' || sexo == 'm') {
+        pesoIdeal = (72.7 * altura) - 58;
+    } else if (sexo == 'F' || sexo == 'f') {
+        pesoIdeal = (62.1 * altura) - 44.7;
+    } else {
+        printf("erro! Por favor insira 'M' para masculino ou 'F' para feminino.\n");
+        return 1; 
+    }
+    printf("%s, seu peso ideal e: %f quilogragas\n", nome, pesoIdeal);
+    return 0;
+}
+
+
+
+
+
+Questão 11
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+	
+	float salarioFixo, valorVendas, salarioTotal, comissao;
+
+    printf("Digite o salario fixo do vendedor: R$ ");
+    scanf("%f", &salarioFixo);  
+    printf("Digite o valor total das vendas efetuadas: R$ ");
+    scanf("%f", &valorVendas);
+    
+    comissao = 0.0;
+    
+    if (valorVendas <= 1500.00) {
+        comissao = valorVendas * 0.03;
+    } else {
+        comissao = 1500.00 * 0.03 + (valorVendas - 1500.00) * 0.05;
+    }
+
+    salarioTotal = salarioFixo + comissao;
+    
+    printf("O salario total do vendedor e: R$ %.2f\n", salarioTotal);
+	
+	return 0;
+}
+
+
+
+
+
+Questão 12
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+    int numeroConta;
+    float saldo, debito, credito, saldoAtual;
+    
+    printf("Digite o numero da conta do cliente: ");
+    scanf("%d", &numeroConta);
+    printf("Digite o saldo da conta: R$ ");
+    scanf("%f", &saldo);
+    printf("Digite o valor do debito: R$ ");
+    scanf("%f", &debito);
+    printf("Digite o valor do credito: R$ ");
+    scanf("%f", &credito);
+    
+    saldoAtual = saldo - debito + credito;
+    printf("Saldo atual da conta %d: e R$ %.2f\n", numeroConta, saldoAtual);
+    
+    if (saldoAtual >= 0) {
+        printf("Saldo Positivo\n");
+    } else {
+        printf("Saldo Negativo\n");
+    }	
+	return 0;
+}
+
+
+
+
+
+Questão 13
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+	
+	 int quantidadeAtual, quantidadeMaxima, quantidadeMinima;
+    float quantidadeMedia;
+    
+    printf("Digite a quantidade atual em estoque: ");
+    scanf("%d", &quantidadeAtual); 
+    printf("Digite a quantidade maxima em estoque: ");
+    scanf("%d", &quantidadeMaxima);
+    printf("Digite a quantidade minima em estoque: ");
+    scanf("%d", &quantidadeMinima);
+    
+    quantidadeMedia = (quantidadeMaxima + quantidadeMinima) / 2.0;
+    
+    printf("Quantidade media de estoque: %.2f\n", quantidadeMedia);
+    
+    if (quantidadeAtual >= quantidadeMedia) {
+        printf("Nao efetuar compra\n");
+    } else {
+        printf("Efetuar compra\n");
+    }
+	return 0;
+}
